@@ -20,6 +20,7 @@ async function httpGetAllWords(req, res){
 //add word
 
 async function httpAddWord(req,res){
+
     try{
 
         const word_id=req.query['word_id']
@@ -39,7 +40,6 @@ async function httpAddWord(req,res){
                     'app_key': app_key
                 }
             })
-
             saveWord(response.data)
             res.json(response.data)
         

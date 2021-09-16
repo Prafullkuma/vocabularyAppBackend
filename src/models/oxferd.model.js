@@ -13,7 +13,7 @@ async function saveWord(data){
     try {
         await words.updateOne({ id:data.id }, {id:data.id,metadata:data.metadata,results:data.results,word:data.word}, {new: true,upsert:true});
     } catch (error) {
-        console.error('Could not Save Planet', error)
+        console.error('Cant be saved',error)
     }
 }
 
